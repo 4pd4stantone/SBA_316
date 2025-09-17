@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href='./styles.css'>
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="outerFrame">
-        <div id="innerFrame">
-            <header>
-                <div id="logoDiv">
-                    <img src="./SOWlogo.png" alt="SOW logo" id="logo">
-
-                </div>
-                <div id="weekday">
-                    <select name="select-day" id="select-day">
-                        <option value="Monday">Monday
-                        </option>
-                        <option value="Tuesday">Tuesday
-                        </option>
-                        <option value="Wednesday">
-                        Wednesday</option>
-                        <option value="Thursday">
-                        Thursday</option>
-                        <option value="Thursday">
-                        Friday</option>
-                        <option value="Thursday">
-                        Saturday</option>
-                        <option value="Thursday">
-                        Sunday</option>
-                    </select>
-
-                </div>
-
-            </header>
-
-
-        </div>
+      <div id="innerFrame">
+        <header>
+          <div id="logoDiv">
+            <img src="./SOWlogo.png" alt="SOW logo" id="logo" />
+          </div>
+          <div id="weekday">
+            <select name="select-day" id="select-day">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Thursday">Friday</option>
+              <option value="Thursday">Saturday</option>
+              <option value="Thursday">Sunday</option>
+            </select>
+          </div>
+        </header>
+        <main>
+          <div id="exercise">
+            <div>
+              <select name="select-body-part" id="select-body-part">
+                <option value="Quadriceps">Quadriceps</option>
+                <option value="Glutes">Glutes</option>
+                <option value="Hamstrings">Hamstrings</option>
+                <option value="Calves">Calves</option>
+                <option value="Abdominals">Abdominals</option>
+              </select>
+              <select name="quad-exercise" id="quad-exercise">
+                <option value="Barbell Back Squat">Barbell Back Squat</option>
+                <option value="Dumbell Walking Lunges">Dumbell Walking Lunges</option>
+                <option value="Sissy Squats">Sissy Squats</option>
+                <option value="Seated Leg Extensions">Seated Leg Extensions</option>
+                <option value="Leg Press">Leg Press</option>
+              </select>
+            </div>
+            <div id="workout-table"></div>
+          </div>
+        </main>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
