@@ -85,6 +85,6 @@ button.textContent = "Add Exercise";
 
 console.log(frag)
 
-const addExerDiv = document.getElementById('add-exercise-div')
+const addExerDiv = document.querySelector('#add-exercise-div')
 addExerDiv.appendChild(frag)
 
