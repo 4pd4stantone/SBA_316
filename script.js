@@ -21,19 +21,24 @@ for (let r = 0; r < weeks; r++) {
     if (s === 0 && r ===0) {
     const td = document.createElement("td");
     tr.appendChild(td);
-    td.textContent = "Ex1";
-    td.style.backgroundColor = 'darkgreen';
-    td.style.color = 'darkgreen'
+    td.textContent = "Week";
+    td.style.backgroundColor = 'rgb(1, 70, 22)';
+    td.style.color = 'lightgreen';
+    td.style.fontWeight = "bold";
     } else if (s === 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
+    td.style.fontWeight = "bold";
     td.textContent = `Wk${r}`;
+    td.style.textDecoration = "underline";
     } else if (s === 1 && r === 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
     td.textContent = `Weight`;
+    td.style.fontWeight = "bold";
     td.style.textAlign = 'center';
-    td.style.backgroundColor = 'lightgreen';
+    td.style.backgroundColor = 'rgb(1, 70, 22)';
+    td.style.color = "lightgreen";
     } else if (s === 1 && r > 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
@@ -52,7 +57,9 @@ for (let r = 0; r < weeks; r++) {
     } else if (s > 1 && r === 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
+    td.style.fontWeight = "bold"
     td.textContent = `Set${s-1}`
+    td.style.textDecoration = "underline";
     } else {
     const td = document.createElement("td");
     tr.appendChild(td);
