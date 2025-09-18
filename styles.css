@@ -81,7 +81,7 @@ header {
     color: #1c5460;
     flex-grow: 1;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
 }
                 
 
@@ -89,7 +89,7 @@ td {
   border: 1px solid rgb(7, 105, 37);
   background-color: white;
   color: rgb(7, 105, 37);
-  padding: 6px;
+  padding: 5.5px;
 }
 
 #workout-table {
@@ -112,7 +112,7 @@ main {
     display: flex;
     /* outline: 1px red solid; */
     width: 600px;
-   
+    
 }
 
 #select-body-part {
@@ -123,6 +123,7 @@ main {
     color: white;
     background-color:rgb(7, 105, 37) ;
     margin-right: 5px;
+    border-radius: 10px 0 0 0;
 }
 #quad-exercise {
     flex-grow: 2;
@@ -132,6 +133,7 @@ main {
     font-size: 20px;
     color: white;
     margin-left: 5px;
+    border-radius: 0 10px 0 0;
 }
 
 #add-exercise {

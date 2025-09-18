@@ -1,12 +1,3 @@
-
-
-// const fragZone = document.getElementById('coolFragZone')
-
-// const fragment = document.createDocumentFragment();
-// fragment.appendChild(document.createElement)
-
-
-// adding weeks and sets to workout plan
 const weeks = 2 + 9;
 const sets = 3 + 9;
 
@@ -66,10 +57,34 @@ for (let r = 0; r < weeks; r++) {
     td.textContent = 0;
     td.style.textAlign = "center"
     }
+    
   }
+
   table.appendChild(tr);
+
+
 }
+
+
 workoutTable.appendChild(table);
 
-document.body.style.background = "linear-gradient(rgb(199, 255, 227), rgb(0, 79, 83))"
+const lastRow = workoutTable.lastElementChild.lastElementChild;
+// console.log(lastRow)
+
+lastRow.lastElementChild.style.borderRadius = "0px 0px 10px 0px";
+
+lastRow.firstElementChild.style.borderRadius = "0px 0px 0px 10px";
+
+document.body.style.background = "linear-gradient(#c7ffe3,#004f53)"
+
+const frag = document.createDocumentFragment()
+let button = document.createElement('button')
+frag.appendChild(button)
+button.id = "add-exercise"
+button.textContent = "Add Exercise";
+
+console.log(frag)
+
+const addExerDiv = document.getElementById('add-exercise-div')
+addExerDiv.appendChild(frag)
 
