@@ -7,8 +7,8 @@
 
 
 // adding weeks and sets to workout plan
-const weeks = 2 + 5;
-const sets = 3 + 4;
+const weeks = 2 + 9;
+const sets = 3 + 9;
 
 const workoutTable = document.getElementById("workout-table");
 const table = document.createElement("table");
@@ -21,23 +21,30 @@ for (let r = 0; r < weeks; r++) {
     if (s === 0 && r ===0) {
     const td = document.createElement("td");
     tr.appendChild(td);
-    td.innerText = "Ex1";
+    td.textContent = "Ex1";
     td.style.backgroundColor = 'darkgreen';
     td.style.color = 'darkgreen'
     } else if (s === 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
-    td.innerText = `Wk${r}`;
+    td.textContent = `Wk${r}`;
     } else if (s === 1 && r === 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
-    td.innerText = `Weight`;
+    td.textContent = `Weight`;
     td.style.textAlign = 'center';
     td.style.backgroundColor = 'lightgreen';
     } else if (s === 1 && r > 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
-    td.innerHTML = `<input type="number" name="number" placeholder="000" min='1' max='999' style="width: 40px; text-align: center">`;
+    let input = document.createElement('input');
+    td.appendChild(input)
+    input.setAttribute("type", "number");
+    input.setAttribute("name", "number");
+    input.setAttribute("placeholder", "000");
+    input.setAttribute("min", "1");
+    input.setAttribute("max", "999");
+    input.setAttribute("style", "width: 40px; text-align: center; color: darkgreen");
     td.style.textAlign = "center";
     td.style.width = "40px";
     td.style.padding = "0 20px";
@@ -45,11 +52,11 @@ for (let r = 0; r < weeks; r++) {
     } else if (s > 1 && r === 0) {
     const td = document.createElement("td");
     tr.appendChild(td);
-    td.innerText = `Set${s-1}`
+    td.textContent = `Set${s-1}`
     } else {
     const td = document.createElement("td");
     tr.appendChild(td);
-    td.innerText = 0;
+    td.textContent = 0;
     td.style.textAlign = "center"
     }
   }
