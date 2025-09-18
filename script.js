@@ -11,42 +11,51 @@ const weeks = 2 + 5;
 const sets = 3 + 4;
 
 const workoutTable = document.getElementById("workout-table");
-// const table = document.createElement("table");
-let table = "<table>"
+const table = document.createElement("table");
+
 
 for (let r = 0; r < weeks; r++) {
-  // const tr = document.createElement("tr");
-  let tr = "<tr>"
+  const tr = document.createElement("tr");
+  
   for (let s = 0; s < sets; s++) {
-    // const td = document.createElement("td");
-    // tr.appendChild(td);
     if (s === 0 && r ===0) {
-      let td = `<td style="background-color: darkgreen; color: darkgreen">Ex1</td>`
-      tr += td
+    const td = document.createElement("td");
+    tr.appendChild(td);
+    td.innerText = "Ex1";
+    td.style.backgroundColor = 'darkgreen';
+    td.style.color = 'darkgreen'
     } else if (s === 0) {
-      let td = `<td>Wk${r}</td>`
-      tr += td
+    const td = document.createElement("td");
+    tr.appendChild(td);
+    td.innerText = `Wk${r}`;
     } else if (s === 1 && r === 0) {
-      let td = `<td style="text-align: center;background-color: lightgreen">Weight</td>`
-      tr += td
+    const td = document.createElement("td");
+    tr.appendChild(td);
+    td.innerText = `Weight`;
+    td.style.textAlign = 'center';
+    td.style.backgroundColor = 'lightgreen';
     } else if (s === 1 && r > 0) {
-      let td = `<td style="padding: 0 20px;background-color: rgb(189, 255, 189)"><input type="number" name="number" placeholder="000" min='1' max='999' style="width: 40px; text-align: center"></td>`
-      tr += td
+    const td = document.createElement("td");
+    tr.appendChild(td);
+    td.innerHTML = `<input type="number" name="number" placeholder="000" min='1' max='999' style="width: 40px; text-align: center">`;
+    td.style.textAlign = "center";
+    td.style.width = "40px";
+    td.style.padding = "0 20px";
+    td.style.backgroundColor = "rgb(189, 255, 189)"
     } else if (s > 1 && r === 0) {
-      let td = `<td>Set${s-1}</td>`
-      tr += td
+    const td = document.createElement("td");
+    tr.appendChild(td);
+    td.innerText = `Set${s-1}`
     } else {
-      let td = `<td>00</td>`
-      tr += td
+    const td = document.createElement("td");
+    tr.appendChild(td);
+    td.innerText = 0;
+    td.style.textAlign = "center"
     }
   }
-  // table.appendChild(tr);
-  tr += "</tr>"
-  table += tr
+  table.appendChild(tr);
 }
-table += "</table>"
-workoutTable.innerHTML = table
-// workoutTable.appendChild(table);
+workoutTable.appendChild(table);
 
 document.body.style.background = "linear-gradient(rgb(199, 255, 227), rgb(0, 79, 83))"
 
