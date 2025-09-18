@@ -26,9 +26,15 @@
             </select>
           </div>
         </header>
+        <div>
+          <div id="top-input-fields">
+            <input type="number" name="number" min='1' max='8' required placeholder="Weeks" class="weeks-sets" >
+            <input type="number" name="number" required min='1' max='10' placeholder="Sets" class="weeks-sets">
+          </div>
+        </div>
         <main>
           <div id="exercise">
-            <div>
+            <div id="exercise-selection">
               <select name="select-body-part" id="select-body-part">
                 <option value="Quadriceps">Quadriceps</option>
                 <option value="Glutes">Glutes</option>
@@ -47,6 +53,9 @@
             <div id="workout-table"></div>
           </div>
         </main>
+        <div id="add-exercise-div">
+            <button id="add-exercise">Add Exercise</button>
+        </div>
       </div>
     </div>
   </body>
