@@ -47,3 +47,6 @@ for (let r = 0; r < weeks; r++) {
 table += "</table>"
 workoutTable.innerHTML = table
 // workoutTable.appendChild(table);
+
+document.body.style.background = "linear-gradient(rgb(199, 255, 227), rgb(0, 79, 83))"
+

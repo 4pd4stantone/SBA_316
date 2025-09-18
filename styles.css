@@ -1,4 +1,7 @@
-
+body {
+    height: 100vh;
+    width: 100vw;
+}
 
 #outerFrame {
     border: 5px aqua solid;
@@ -8,6 +11,7 @@
     margin-right: auto;
     margin-top: 5vw;
     background-color: rgb(7, 105, 37);
+    box-shadow: -15px 15px 5px rgb(1, 70, 22);
 }
 
 #innerFrame {
@@ -159,7 +163,8 @@ main {
 
 #add-exercise-div {
     margin-left: 480px;
-    /* outline: 1px red solid; */
     padding-bottom: 20px;
 }
+
+
 
