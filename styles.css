@@ -23,11 +23,7 @@ body {
     background-color: aquamarine;
 }
 
-#logoDiv {
-    background-color: rgb(7, 105, 37);
-    display: flex;
-    border-radius: 25%;
-}
+
 
 #logo {
     height: 10vh;
@@ -167,6 +163,42 @@ main {
     margin-left: 480px;
     padding-bottom: 20px;
 }
+
+#logoDiv {
+    background-color: rgb(7, 105, 37);
+    display: flex;
+    border-radius: 25%;
+    background-image: linear-gradient(
+    to top left, rgba(45, 254, 48, 0.2), rgba(29, 154, 29, 0.2) 50%,transparent);
+    box-shadow:
+    inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+    inset -2px -2px 3px rgba(0, 166, 22, 0.6);
+}
+
+#logoDiv:hover {
+    background-color: aqua;
+    opacity: 90%;
+}
+
+
+#logoDiv:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+
+p {
+    padding: 8px 16px;
+    width: 320px;
+    text-align: center;
+    margin-right: auto;
+    background-color: #6c848b;
+    color: aqua;
+    margin: 20px 20px 0px 0px;
+    border-radius: 15px;
+}
+
+
 
 
 

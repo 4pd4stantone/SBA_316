@@ -54,15 +54,18 @@ for (let r = 0; r < weeks; r++) {
     } else {
     const td = document.createElement("td");
     tr.appendChild(td);
+    td.classList.add('set-box')
     td.textContent = 0;
-    td.style.textAlign = "center"
+    td.style.textAlign = "center";
+    td.addEventListener("click", incrementByOne);
+    td.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+      decreaseByOne(e);
+    });
+    console.log(td)
     }
-    
   }
-
   table.appendChild(tr);
-
-
 }
 
 
@@ -87,4 +90,40 @@ console.log(frag)
 
 const addExerDiv = document.querySelector('#add-exercise-div')
 addExerDiv.appendChild(frag)
+
+// Template!!! using cloneNode Methods: Review video form Sept. 10th, 2nd part 1:50 to see how to create a function to use template.
+
+//BOM methods: window.open() and window.focus()
+let logoDiv = document.getElementById('logoDiv')
+console.log(logoDiv)
+logoDiv.addEventListener("click", newWindow);
+
+let myWebsite; 
+function newWindow() {
+    myWebsite = window.open(
+      "https://VictorStanton.com",
+      "Victor Stanton",
+      "width=800, height=400, resizable=yes, scrollbars=yes location=yes");
+      myWebsite.focus();
+}
+
+const setBox = document.getElementsByClassName('set-box')
+
+function incrementByOne(e) {
+  let setBoxValue = Number(e.target.textContent);
+  e.target.textContent = setBoxValue + 1;
+  if (e.target.textContent > 0) {
+    e.target.style.backgroundColor = 'green';
+    e.target.style.color = 'white'
+  }
+}
+
+//right click to decrease as dblclick failed
+function decreaseByOne(e) {
+  let setBoxValue = Number(e.target.textContent);
+  if (setBoxValue > 0) {
+  e.target.textContent = setBoxValue - 1;
+  }
+}
+
 
