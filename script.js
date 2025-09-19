@@ -1,9 +1,42 @@
-const weeks = 2 + 9;
-const sets = 3 + 9;
 
+const enterWeeksEl = document.getElementById('top-input-fields');
+
+enterWeeksEl.firstElementChild.addEventListener('click', setupWorkoutWeeks)
+enterWeeksEl.lastElementChild.addEventListener('change', setupWorkoutSets)
+
+let selectedWeeks = 0;
+let weeks = 2;
+let sets = 3;
+
+buildWorkoutTable(weeks, sets)
+
+function selectWeeks() {
+  while (true) {
+    let input = parseInt(window.prompt("How many weeks will you do this workout? (Enter a number from 1-10):"));
+    
+    if (!isNaN(input) && input >= 1 && input <= 10) {
+      selectedWeeks = input - 1;
+      return Math.max(2, 2 + (input -1))// value should always be 2-10 weeks.
+    } else {
+      window.alert("Please enter a valid number between 1 and 10.");
+    }
+  }
+}
+
+function setupWorkoutSets() {
+    sets = Number(enterWeeksEl.lastElementChild.value) + 2;
+    buildWorkoutTable(weeks, sets);
+}
+
+function setupWorkoutWeeks() {
+  weeks = selectWeeks();
+  buildWorkoutTable(weeks, sets);
+}
+
+function buildWorkoutTable(weeks, sets) {
 const workoutTable = document.getElementById("workout-table");
-const table = document.createElement("table");
-
+workoutTable.innerHTML = "";
+let table = document.createElement("table");
 
 for (let r = 0; r < weeks; r++) {
   const tr = document.createElement("tr");
@@ -62,7 +95,7 @@ for (let r = 0; r < weeks; r++) {
       e.preventDefault();
       decreaseByOne(e);
     });
-    console.log(td)
+    // console.log(td)
     }
   }
   table.appendChild(tr);
@@ -77,16 +110,18 @@ const lastRow = workoutTable.lastElementChild.lastElementChild;
 lastRow.lastElementChild.style.borderRadius = "0px 0px 10px 0px";
 
 lastRow.firstElementChild.style.borderRadius = "0px 0px 0px 10px";
+}
+buildWorkoutTable(weeks, sets);
 
 document.body.style.background = "linear-gradient(#c7ffe3,#004f53)"
 
 const frag = document.createDocumentFragment()
 let button = document.createElement('button')
 frag.appendChild(button)
-button.id = "add-exercise"
+button.id = "add-exercise";
 button.textContent = "Add Exercise";
 
-console.log(frag)
+// console.log(frag)
 
 const addExerDiv = document.querySelector('#add-exercise-div')
 addExerDiv.appendChild(frag)
@@ -95,13 +130,13 @@ addExerDiv.appendChild(frag)
 
 //BOM methods: window.open() and window.focus()
 let logoDiv = document.getElementById('logoDiv')
-console.log(logoDiv)
+// console.log(logoDiv)
 logoDiv.addEventListener("click", newWindow);
 
 let myWebsite; 
 function newWindow() {
     myWebsite = window.open(
-      "https://VictorStanton.com",
+      "https://VictorStanton.com",//website if not running at the moment.
       "Victor Stanton",
       "width=800, height=400, resizable=yes, scrollbars=yes location=yes");
       myWebsite.focus();
@@ -123,6 +158,10 @@ function decreaseByOne(e) {
   let setBoxValue = Number(e.target.textContent);
   if (setBoxValue > 0) {
   e.target.textContent = setBoxValue - 1;
+  } 
+  if (setBoxValue == 0){
+    e.target.style.backgroundColor = 'white';
+    e.target.style.color = 'green'
   }
 }
 

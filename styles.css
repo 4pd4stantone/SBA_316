@@ -23,8 +23,6 @@ body {
     background-color: aquamarine;
 }
 
-
-
 #logo {
     height: 10vh;
     width: 10vh;
@@ -61,19 +59,51 @@ header {
 
 #top-input-fields {
     display: flex;
-    /* outline: 1px red solid; */
-    width: 570px;
+    width: 650px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    align-content: space-between;
+}
+
+#enter-sets {
+    margin-left: 10px;
+}
+
+#weeks-btn {
+    width: 305px;
+    height: 60px;
+    border-radius: 20px;
+    color: white;
+    background-color: #006e05;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+    background-image: linear-gradient(
+    to top left, rgba(45, 254, 48, 0.2), rgba(29, 154, 29, 0.2) 50%,transparent);
+    box-shadow:
+    inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+    inset -2px -2px 3px rgba(0, 166, 22, 0.6);
+   margin-right: 10px;
+}
+
+#weeks-btn:hover {
+    background-color: rgb(1, 129, 1);
+}
+
+#weeks-btn:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 
 .weeks-sets {
     height: 50px;
-    margin: 10px;
+    margin: 0px;
     border: 5px solid  rgb(7, 105, 37);
     border-radius: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
     color: #1c5460;
     flex-grow: 1;
     text-align: center;
@@ -132,6 +162,24 @@ main {
     border-radius: 0 10px 0 0;
 }
 
+.set-box {
+    box-shadow:
+    inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+    inset -2px -2px 3px rgba(0, 166, 22, 0.6);
+    background-image: linear-gradient(
+    to top left, rgba(45, 254, 48, 0.2), rgba(29, 154, 29, 0.2) 50%,transparent);
+}
+
+.set-box:hover {
+    background-color: rgb(1, 129, 1);
+}
+
+.set-box:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+
 #add-exercise {
     width: 200px;
     height: 60px;
@@ -187,16 +235,31 @@ main {
     inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 
+#click-p {
+    display:  flex;
+    justify-content: space-between;
+}
+
 p {
-    padding: 8px 16px;
-    width: 320px;
+    padding: 8px 0px;
+    width: 299px;
     text-align: center;
-    margin-right: auto;
     background-color: #6c848b;
     color: aqua;
-    margin: 20px 20px 0px 0px;
-    border-radius: 15px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-size: 14px;
+    align-content: space-between;
 }
+
+#btm-p {
+    border-radius: 0 0 15px 0;
+}
+
+#top-p {
+    border-radius: 0 0 0 15px;
+}
+
 
 
 
