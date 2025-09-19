@@ -16,7 +16,7 @@ function selectWeeks() {
     
     if (!isNaN(input) && input >= 1 && input <= 10) {
       selectedWeeks = input - 1;
-      return Math.max(2, 2 + (input -1))// value should always be 2-10 weeks.
+      return Math.max(2, 2 + (input -1))// Use Math.max to ensure value is always 2-10.
     } else {
       window.alert("Please enter a valid number between 1 and 10.");
     }
