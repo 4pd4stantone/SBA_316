@@ -126,6 +126,16 @@ button.textContent = "Add Exercise";
 const addExerDiv = document.querySelector('#add-exercise-div')
 addExerDiv.appendChild(frag)
 
+// adding an event listener that triggers the window.alert() in the add exercise button.
+
+let exerciseBtn = document.getElementById("add-exercise");
+console.log(exerciseBtn)
+exerciseBtn.addEventListener('click', alertMessage);
+
+function alertMessage() {
+  return window.alert('Add exercise feature coming soon')
+}
+
 // Template!!! using cloneNode Methods: Review video form Sept. 10th, 2nd part 1:50 to see how to create a function to use template.
 
 //BOM methods: window.open() and window.focus()
