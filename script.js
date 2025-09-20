@@ -210,9 +210,9 @@ function validateSignUp(e) {
     return false;
   }
 
-  alert(`Name: ${nameVal}
-  Email: ${emailVal}
-  Zip Code: ${zipVal}`);
+  alert(`${nameVal}, thank you for signing up for email updates.`);
+
+  form.reset();
 
   return true;
 }
