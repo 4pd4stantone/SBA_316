@@ -1,115 +1,115 @@
 body {
-    height: 150vh;
-    width: 100vw;
+  height: 150vh;
+  width: 100vw;
 }
 
-#outerFrame {
-    border: 5px aqua solid;
-    border-radius: 40px;
-    width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5vw;
-    background-color: rgb(7, 105, 37);
-    box-shadow: -15px 15px 5px rgb(1, 70, 22);
+.outerFrame {
+  border: 5px aqua solid;
+  border-radius: 40px;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vw;
+  background-color: rgb(7, 105, 37);
+  box-shadow: -15px 15px 5px rgb(1, 70, 22);
 }
 
-#innerFrame {
-    border: 5px aqua solid;
-    border-radius: 20px;
-    width: 700px;
-    margin: 18px auto;
-    padding: auto;
-    background-color: aquamarine;
+.innerFrame {
+  border: 5px aqua solid;
+  border-radius: 20px;
+  width: 700px;
+  margin: 18px auto;
+  padding: auto;
+  background-color: aquamarine;
 }
 
 #logo {
-    height: 10vh;
-    width: 10vh;
-    border-radius: 25%;
-    align-self: center;
-    margin: 5px;
-   
+  height: 10vh;
+  width: 10vh;
+  border-radius: 25%;
+  align-self: center;
+  margin: 5px;
 }
 
 #weekday {
-    margin-top: 5px;
-    height: 10vh;
-    margin-left: 20px;
-    flex-grow: 1;
+  margin-top: 5px;
+  height: 10vh;
+  margin-left: 20px;
+  flex-grow: 1;
 }
 
 header {
-    display: flex;
-    margin: 12px;
+  display: flex;
+  margin: 12px;
 }
 
 #select-day {
-    width: 540px;
-    height: 95px;
-    font-size: 70px;
-    flex-grow: 1;
-    text-align: center;
-    font-family:Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(7, 105, 37);
-    color: whitesmoke;
-    outline: 5px aqua solid;
-    border-radius: 25px;
+  width: 540px;
+  height: 95px;
+  font-size: 70px;
+  flex-grow: 1;
+  text-align: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  background-color: rgb(7, 105, 37);
+  color: whitesmoke;
+  outline: 5px aqua solid;
+  border-radius: 25px;
 }
 
 #top-input-fields {
-    display: flex;
-    width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    align-content: space-between;
+  display: flex;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  align-content: space-between;
 }
 
 #enter-sets {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 #weeks-btn {
-    width: 305px;
-    height: 60px;
-    border-radius: 20px;
-    color: white;
-    background-color: #006e05;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 10px 10px 10px;
-    background-image: linear-gradient(
-    to top left, rgba(45, 254, 48, 0.2), rgba(29, 154, 29, 0.2) 50%,transparent);
-    box-shadow:
-    inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+  width: 305px;
+  height: 60px;
+  border-radius: 20px;
+  color: white;
+  background-color: #006e05;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+  background-image: linear-gradient(
+    to top left,
+    rgba(45, 254, 48, 0.2),
+    rgba(29, 154, 29, 0.2) 50%,
+    transparent
+  );
+  box-shadow: inset 2px 2px 3px rgba(241, 255, 244, 0.6),
     inset -2px -2px 3px rgba(0, 166, 22, 0.6);
-   margin-right: 10px;
+  margin-right: 10px;
 }
 
 #weeks-btn:hover {
-    background-color: rgb(1, 129, 1);
+  background-color: rgb(1, 129, 1);
 }
 
 #weeks-btn:active {
-  box-shadow:
-    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 0.6),
     inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 
 .weeks-sets {
-    height: 50px;
-    margin: 0px;
-    border: 5px solid  rgb(7, 105, 37);
-    border-radius: 20px;
-    padding-left: 30px;
-    color: #1c5460;
-    flex-grow: 1;
-    text-align: center;
-    font-size: 30px;
+  height: 50px;
+  margin: 0px;
+  border: 5px solid rgb(7, 105, 37);
+  border-radius: 20px;
+  padding-left: 30px;
+  color: #1c5460;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 30px;
 }
-                
 
 td {
   border: 1px solid rgb(7, 105, 37);
@@ -119,149 +119,203 @@ td {
 }
 
 #workout-table {
-    /* outline: 1px red solid; */
-    padding-top: 5px;
+  /* outline: 1px red solid; */
+  padding-top: 5px;
 }
 
 main {
-    /* outline: 1px red solid; */
-    display: flex;
-    margin: 10px 20px 20px 20px;
-    padding: 25px;
-    background-color: aqua;
-    border-radius: 25px;
-    border: 5px solid rgb(7, 105, 37);
+  /* outline: 1px red solid; */
+  display: flex;
+  margin: 10px 20px 20px 20px;
+  padding: 25px;
+  background-color: aqua;
+  border-radius: 25px;
+  border: 5px solid rgb(7, 105, 37);
 }
 
 #exercise-selection {
-    flex-wrap: nowrap;
-    display: flex;
-    /* outline: 1px red solid; */
-    width: 600px;
-    
+  flex-wrap: nowrap;
+  display: flex;
+  /* outline: 1px red solid; */
+  width: 600px;
 }
 
 #select-body-part {
-    flex-grow: 1;
-    height: 35px;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    background-color:rgb(7, 105, 37) ;
-    margin-right: 5px;
-    border-radius: 10px 0 0 0;
+  flex-grow: 1;
+  height: 35px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(7, 105, 37);
+  margin-right: 5px;
+  border-radius: 10px 0 0 0;
 }
 #quad-exercise {
-    flex-grow: 2;
-    height: 35px;
-    text-align: center;
-    background-color: rgb(7, 105, 37);
-    font-size: 20px;
-    color: white;
-    margin-left: 5px;
-    border-radius: 0 10px 0 0;
+  flex-grow: 2;
+  height: 35px;
+  text-align: center;
+  background-color: rgb(7, 105, 37);
+  font-size: 20px;
+  color: white;
+  margin-left: 5px;
+  border-radius: 0 10px 0 0;
 }
 
 .set-box {
-    box-shadow:
-    inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+  box-shadow: inset 2px 2px 3px rgba(241, 255, 244, 0.6),
     inset -2px -2px 3px rgba(0, 166, 22, 0.6);
-    background-image: linear-gradient(
-    to top left, rgba(45, 254, 48, 0.2), rgba(29, 154, 29, 0.2) 50%,transparent);
+  background-image: linear-gradient(
+    to top left,
+    rgba(45, 254, 48, 0.2),
+    rgba(29, 154, 29, 0.2) 50%,
+    transparent
+  );
 }
 
 .set-box:hover {
-    background-color: rgb(1, 129, 1);
+  background-color: rgb(1, 129, 1);
 }
 
 .set-box:active {
-  box-shadow:
-    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 0.6),
     inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 
 #add-exercise {
-    width: 200px;
-    height: 60px;
-    border-radius: 20px;
-    color: white;
-    background-color: #006e05;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 10px 10px 10px;
-    background-image: linear-gradient(
-    to top left, rgba(45, 254, 48, 0.2), rgba(29, 154, 29, 0.2) 50%,transparent);
-    box-shadow:
-    inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  color: white;
+  background-color: #006e05;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+  background-image: linear-gradient(
+    to top left,
+    rgba(45, 254, 48, 0.2),
+    rgba(29, 154, 29, 0.2) 50%,
+    transparent
+  );
+  box-shadow: inset 2px 2px 3px rgba(241, 255, 244, 0.6),
     inset -2px -2px 3px rgba(0, 166, 22, 0.6);
 }
 
 #add-exercise:hover {
-    background-color: rgb(1, 129, 1);
+  background-color: rgb(1, 129, 1);
 }
 
 #add-exercise:active {
-  box-shadow:
-    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 0.6),
     inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 
 #add-exercise-div {
-    margin-left: 480px;
-    padding-bottom: 20px;
+  margin-left: 480px;
+  padding-bottom: 20px;
 }
 
 #logoDiv {
-    background-color: rgb(7, 105, 37);
-    display: flex;
-    border-radius: 25%;
-    background-image: linear-gradient(
-    to top left, rgba(45, 254, 48, 0.2), rgba(29, 154, 29, 0.2) 50%,transparent);
-    box-shadow:
-    inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+  background-color: rgb(7, 105, 37);
+  display: flex;
+  border-radius: 25%;
+  background-image: linear-gradient(
+    to top left,
+    rgba(45, 254, 48, 0.2),
+    rgba(29, 154, 29, 0.2) 50%,
+    transparent
+  );
+  box-shadow: inset 2px 2px 3px rgba(241, 255, 244, 0.6),
     inset -2px -2px 3px rgba(0, 166, 22, 0.6);
 }
 
 #logoDiv:hover {
-    background-color: aqua;
-    opacity: 90%;
+  background-color: aqua;
+  opacity: 90%;
 }
 
-
 #logoDiv:active {
-  box-shadow:
-    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 0.6),
     inset 2px 2px 3px rgb(0 0 0 / 0.6);
 }
 
 #click-p {
-    display:  flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 p {
-    padding: 8px 0px;
-    width: 299px;
-    text-align: center;
-    background-color: #6c848b;
-    color: aqua;
-    margin-top: 2px;
-    margin-bottom: 0;
-    font-size: 14px;
-    align-content: space-between;
+  padding: 8px 0px;
+  width: 299px;
+  text-align: center;
+  background-color: #6c848b;
+  color: aqua;
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-size: 14px;
+  align-content: space-between;
 }
 
 #btm-p {
-    border-radius: 0 0 15px 0;
+  border-radius: 0 0 10px 0;
 }
 
 #top-p {
-    border-radius: 0 0 0 15px;
+  border-radius: 0 0 0 10px;
 }
 
+h3 {
+  outline: 1px red solid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(7, 105, 37);
+  color: whitesmoke;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  border-radius: 25px;
+  outline: 5px aqua solid;
+  margin-bottom: 0px;
+}
 
+#form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 20px;
+  align-items: center;
+}
 
+.emailSignUp {
+  margin: 5px;
+  width: 200px;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  color: rgb(1, 129, 1);
+}
 
+#submitBtn {
+  background-image: linear-gradient(
+    to top left,
+    rgba(45, 254, 48, 0.2),
+    rgba(29, 154, 29, 0.2) 50%,
+    transparent
+  );
+  box-shadow: inset 2px 2px 3px rgba(241, 255, 244, 0.6),
+    inset -2px -2px 3px rgba(0, 166, 22, 0.6);
+  background-color: rgb(7, 105, 37);
+  color: whitesmoke;
+  margin-top: 20px;
+}
 
+#submitBtn:hover {
+  background-color: rgb(1, 129, 1);
+  opacity: 90%;
+}
 
+#submitBtn:active {
+  box-shadow: inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}

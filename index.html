@@ -8,8 +8,8 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="outerFrame">
-      <div id="innerFrame">
+    <div class="outerFrame">
+      <div class="innerFrame">
         <header>
           <div id="logoDiv">
             <img src="./SOWlogo.png" alt="SOW logo" id="logo" />
@@ -30,7 +30,15 @@
         <div>
           <div id="top-input-fields">
             <button id="weeks-btn">Enter Weeks</button>
-            <input type="number" name="number" required min='1' max='10' placeholder="Enter Sets" class="weeks-sets" id="enter-sets">
+            <input
+              type="number"
+              name="number"
+              min="1"
+              max="10"
+              placeholder="Enter Sets"
+              class="weeks-sets"
+              id="enter-sets"
+            />
           </div>
         </div>
         <main>
@@ -45,15 +53,21 @@
               </select>
               <select name="quad-exercise" id="quad-exercise">
                 <option value="Barbell Back Squat">Barbell Back Squat</option>
-                <option value="Dumbell Walking Lunges">Dumbell Walking Lunges</option>
+                <option value="Dumbell Walking Lunges">
+                  Dumbell Walking Lunges
+                </option>
                 <option value="Sissy Squats">Sissy Squats</option>
-                <option value="Seated Leg Extensions">Seated Leg Extensions</option>
+                <option value="Seated Leg Extensions">
+                  Seated Leg Extensions
+                </option>
                 <option value="Leg Press">Leg Press</option>
               </select>
               <template>
-                  <select name="glute-exercise" id="glute-exercise">
+                <select name="glute-exercise" id="glute-exercise">
                   <option value="Romanian DeadLift">Romanian DeadLift</option>
-                  <option value="Glute Walking Lunges">Glute Walking Lunges</option>
+                  <option value="Glute Walking Lunges">
+                    Glute Walking Lunges
+                  </option>
                   <option value="Hip Extensions">Hip Extensions</option>
                   <option value="Hip Abduction">Hip Abduction</option>
                   <option value="Donkey Kicks">Donkey Kicks</option>
@@ -67,8 +81,18 @@
             </div>
           </div>
         </main>
-        <div id="add-exercise-div">
-        </div>
+        <div id="add-exercise-div"></div>
+      </div>
+    </div>
+    <div class="outerFrame">
+      <div class="innerFrame">
+        <h3>Sign-Up for Email Updates</h3>
+        <form name="emailSignUp" method="POST" id="form">
+          <input class="emailSignUp" type="text" name="name" placeholder="Name" required/>
+          <input class="emailSignUp" type="text" name="email" placeholder="Email" required/>
+          <input class="emailSignUp" type="text" name="zip" placeholder="Zip Code" required/>
+          <input class="emailSignUp" type="submit" value="Submit" required id="submitBtn"/>
+        </form>
       </div>
     </div>
   </body>
