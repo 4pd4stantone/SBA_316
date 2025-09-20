@@ -1,5 +1,9 @@
+
+// 1. Use getElementById
 const enterWeeksEl = document.getElementById("top-input-fields");
 
+//3. Navigate between Elements using First and Last Child Elements.
+//12. Use at least 2 Event Listeners associated with event handler functions.
 enterWeeksEl.firstElementChild.addEventListener("click", setupWorkoutWeeks);
 enterWeeksEl.lastElementChild.addEventListener("change", setupWorkoutSets);
 
@@ -35,10 +39,11 @@ function setupWorkoutWeeks() {
   weeks = selectWeeks();
   buildWorkoutTable(weeks, sets);
 }
-
+// 4. Iterate over a collection of elements to accomplish some task.
 function buildWorkoutTable(weeks, sets) {
   const workoutTable = document.getElementById("workout-table");
   workoutTable.innerHTML = "";
+  //5. Use the createElement.
   let table = document.createElement("table");
 
   for (let r = 0; r < weeks; r++) {
@@ -47,7 +52,9 @@ function buildWorkoutTable(weeks, sets) {
     for (let s = 0; s < sets; s++) {
       if (s === 0 && r === 0) {
         const td = document.createElement("td");
+        //6. Use the appendChild attribute.
         tr.appendChild(td);
+        //8. Use textContent in response to user interaction.
         td.textContent = "Week";
         td.style.backgroundColor = "rgb(1, 70, 22)";
         td.style.color = "lightgreen";
@@ -93,6 +100,7 @@ function buildWorkoutTable(weeks, sets) {
       } else {
         const td = document.createElement("td");
         tr.appendChild(td);
+        //11. modify attribute in response to user interaction
         td.classList.add("set-box");
         td.textContent = 0;
         td.style.textAlign = "center";
@@ -120,6 +128,7 @@ buildWorkoutTable(weeks, sets);
 
 document.body.style.background = "linear-gradient(#c7ffe3,#004f53)";
 
+//7. Use Document Fragment
 const frag = document.createDocumentFragment();
 let button = document.createElement("button");
 frag.appendChild(button);
@@ -127,7 +136,7 @@ button.id = "add-exercise";
 button.textContent = "Add Exercise";
 
 // console.log(frag)
-
+// 2. Use querySelector
 const addExerDiv = document.querySelector("#add-exercise-div");
 addExerDiv.appendChild(frag);
 
@@ -143,7 +152,7 @@ function alertMessage() {
 
 // Template!!! using cloneNode Methods: Review video form Sept. 10th, 2nd part 1:50 to see how to create a function to use template.
 
-//BOM methods: window.open() and window.focus()
+//13. BOM methods: window.open() and window.focus()
 let logoDiv = document.getElementById("logoDiv");
 // console.log(logoDiv)
 logoDiv.addEventListener("click", newWindow);
@@ -164,6 +173,7 @@ function incrementByOne(e) {
   let setBoxValue = Number(e.target.textContent);
   e.target.textContent = setBoxValue + 1;
   if (e.target.textContent > 0) {
+    //9. Modify style in response to user interaction.
     e.target.style.backgroundColor = "green";
     e.target.style.color = "white";
   }
@@ -181,7 +191,7 @@ function decreaseByOne(e) {
   }
 }
 
-// Javascript Form Validation
+// 14&15. HTML & Javascript Form Validation
 
 const form = document.getElementById("form");
 const nameForm = form.elements["name"];
